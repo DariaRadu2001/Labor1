@@ -1,6 +1,12 @@
 package Aufgabe3;
 
 public class Aufgabe3 {
+
+    /*1.
+    Vorbedinung: ein Array mit Ziffern von zahl1 und ein anderes Array von Ziffern von zahl2
+    Nachbedinung: ein Array von Ziffern, die Summe der zwei Zahlen
+    Ich erledige von rechts nach links die Summe jeden zwei Ziffern die sich auf der selben Position befinden
+    */
     public int[] summe(int[] zahl1, int[] zahl2)
     {
         //ich habe ein Array mit eine grossere lange mit 1 als die gegebenen Zahlen
@@ -41,6 +47,11 @@ public class Aufgabe3 {
         return summe;
     }
 
+    /*2.
+    Vorbedinung: ein Array mit Ziffern von zahl1 und ein anderes Array von Ziffern von zahl2
+    Nachbedinung: ein Array von Ziffern, die Differenz der zwei Zahlen
+    Ich erledige von rechts nach links die Differenz jeden zwei Ziffern die sich auf der selben Position befinden
+    */
     public int[] differenz(int[] zahl1, int[] zahl2)
     {
         int[] differenz = new int[zahl1.length];
@@ -51,7 +62,7 @@ public class Aufgabe3 {
         {
             //minus ist eine Variable indem ich die Differenz zw. die 2 Zahlen speichere
             minus = zahl1[i] - zahl2[i];
-            //wenn minus negativ ist dan muss ich die mathematische Sache tun, indem ich von dem Ziffrn bevor 1 nehme
+            //wenn minus negativ ist, dann muss ich die mathematische Sache tun, indem ich von der Ziffer bevor 1 nehme
             if(minus < 0)
             {
                 zahl1[i - 1] --;
@@ -66,6 +77,11 @@ public class Aufgabe3 {
 
     }
 
+    /*3.
+    Vorbedinung: ein Array mit Ziffern von zahl und eine Ziffer
+    Nachbedinung: ein Array von Ziffern, die Multiplikation zwischen Zahl und Ziffer
+    Ich erledige von rechts nach links die Multiplikation jeder Ziffer mit dem Ziffer gegeben als Parameter
+    */
     public int[] multiplikation(int[] zahl, int ziffer)
     {
         int[] mul = new int[zahl.length + 1];
@@ -107,6 +123,11 @@ public class Aufgabe3 {
         return mul;
     }
 
+    /*4.
+    Vorbedinung: ein Array mit Ziffern von zahl und eine Ziffer
+    Nachbedinung: ein Array von Ziffern, die Division zwischen Zahl und Ziffer
+    Ich erledige von links nach rechts die Division jeder Ziffer mit dem Ziffer gegeben als Parameter
+    */
     public int[] division(int[] zahl, int ziffer)
     {
         int[] div = new int[zahl.length];

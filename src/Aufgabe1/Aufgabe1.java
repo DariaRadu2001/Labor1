@@ -2,7 +2,11 @@ package Aufgabe1;
 
 public class Aufgabe1 {
 
-    //1.
+    /*1.
+    Vorbedinung: ein Array von Noten
+    Nachbedinung: ein Array von Noten die kleiner als 38 sind
+    Ich durchquerre den Array von Noten und erledige ein neues Array mit den nichtgenugenden(<38) Noten
+    */
     public int[] nicht_genug(int[] noten)
     {
         int count = 0;
@@ -29,7 +33,11 @@ public class Aufgabe1 {
         return ergebnis;
     }
 
-    //2.
+    /*2.
+    Vorbedinung: ein Array von Noten
+    Nachbedinung: die arithmetische Mittel der Noten
+    Ich durchquerre den Array und berechne die Summe aller Noten und danach dividiere sie mit dem Anzahl von Entitaten in dem Array
+    */
     public double durchschnitt(int[] noten)
     {
         double durchschnitt = 0;
@@ -42,7 +50,11 @@ public class Aufgabe1 {
         return summe/noten.length;
     }
 
-    //3.
+    /*3.
+    Vorbedinung: ein Array von Noten
+    Nachbedinung: ein Array von Noten die gerunden sind
+    Ich durchquerre den Array von Noten und erledige den Prozzes von Runden, wo es moglich ist
+    */
     public int[] runden(int[] noten)
     {
         int[] ergebnis = new int[noten.length] ;
@@ -76,7 +88,11 @@ public class Aufgabe1 {
         return ergebnis;
     }
 
-    //4.
+    /*4.
+    Vorbedinung: ein Array von Noten
+    Nachbedinung: die grosste Note die auch gerundet wurde
+    Ich durchquerre den Array von Noten und erledige ein neues Array mit den nichtgenugenden(<38) Noten
+    */
     public int max_runden(int[] noten)
     {
         int max = Integer.MIN_VALUE;

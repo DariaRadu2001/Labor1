@@ -71,9 +71,9 @@ public class Main {
         buget = keyboard.nextInt();
         //ich erstelle ein neues Objekt der Typ Aufgabe4
         Aufgabe4 liste4 = new Aufgabe4();
-        System.out.println("Aufgabe4 1 = " + liste4.billige_tastatur(tastatur));
-        System.out.println("Aufgabe4 2 = " + liste4.teuesten(tastatur, USB));
-        System.out.println("Aufgabe4 3 = " + liste4.buget_USB(buget, USB));
+        System.out.println("Aufgabe4 1 = " + liste4.billige_tastatur(tastatur));//15
+        System.out.println("Aufgabe4 2 = " + liste4.teuesten(tastatur, USB));//80
+        System.out.println("Aufgabe4 3 = " + liste4.buget_USB(buget, USB));//
         System.out.println("Aufgabe4 4 = " + liste4.buget_preisliste(buget, tastatur, USB));
 
     }
