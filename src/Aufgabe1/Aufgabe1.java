@@ -1,5 +1,7 @@
 package Aufgabe1;
 
+import javax.management.InvalidAttributeValueException;
+
 public class Aufgabe1 {
 
     /*1.
@@ -9,12 +11,20 @@ public class Aufgabe1 {
     */
     public int[] nicht_genug(int[] noten)
     {
+        //Exception, wenn das Array leer ist
+        if(noten.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Noten.");
+
         int count = 0;
         int count2 = 0;
 
         //ich zahle wv. Noten nicht genug sind, um die Dimensions des Arrays zu wissen
         for (int i = 0; i < noten.length; i++)
         {
+            //Exception, wenn eine Note negativ ist
+            if(noten[i] < 0)
+                throw new IllegalArgumentException("Negative Noten konnen nicht in dem Array sein.");
+
             if (noten[i] < 38)
                 count++;
         }
@@ -40,11 +50,19 @@ public class Aufgabe1 {
     */
     public double durchschnitt(int[] noten)
     {
+        //Exception, wenn das Array leer ist
+        if(noten.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Noten.");
+
         double durchschnitt = 0;
         double summe = 0;
         //ich berechne die Summe des Arrays und mache die Aritmetische Mittel
         for (int i = 0; i < noten.length; i++)
         {
+            //Exception, wenn eine Note negativ ist
+            if(noten[i] < 0)
+                throw new IllegalArgumentException("Negative Noten konnen nicht in dem Array sein.");
+
             summe += noten[i];
         }
         return summe/noten.length;
@@ -57,10 +75,18 @@ public class Aufgabe1 {
     */
     public int[] runden(int[] noten)
     {
+        //Exception, wenn das Array leer ist
+        if(noten.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Noten.");
+
         int[] ergebnis = new int[noten.length] ;
         //ich durchlaufe das Array
         for (int i = 0; i < noten.length; i++)
         {
+            //Exception, wenn eine Note negativ ist
+            if(noten[i] < 0)
+                throw new IllegalArgumentException("Negative Noten konnen nicht in dem Array sein.");
+
             //die Note ist kleiner als 38 => kann nicht runden
             if (noten[i] < 38)
             {
@@ -95,9 +121,17 @@ public class Aufgabe1 {
     */
     public int max_runden(int[] noten)
     {
+        //Exception, wenn das Array leer ist
+        if(noten.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Noten.");
+
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < noten.length; i++)
         {
+            //Exception, wenn eine Note negativ ist
+            if(noten[i] < 0)
+                throw new IllegalArgumentException("Negative Noten konnen nicht in dem Array sein.");
+
             //ich runde die Liste und wo ich runde, prufe ich ob das gerundete Zahl das grosste ist
             if(noten[i] >= 38)
             {

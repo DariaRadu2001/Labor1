@@ -12,18 +12,18 @@ public class Main {
     public static void main(String[] args) {
 
         //Aufgabe1
-   /*
+
         //ich erstelle ein neues Objekt der Typ Aufgabe1
         Aufgabe1 liste = new Aufgabe1();
         int[] noten = new int[] {34, 67, 20, 38, 37, 53, 90, 22, 46, 40, 27, 33, 48};
-
         System.out.println("Aufgabe1 1 = " + Arrays.toString(liste.nicht_genug(noten)));
+        int[] noten2 = new int[] {34, 67, 20, -38, 37, 53, 90, 22, 46, 40, 27, 33, 48};
         System.out.println("Aufgabe1 2 = " + liste.durchschnitt(noten));
         System.out.println("Aufgabe1 3 = " + Arrays.toString(liste.runden(noten)));
         System.out.println("Aufgabe1 4 = " + liste.max_runden(noten));
 
         /////////////////////////
-        //Aufgabe2
+      /*  //Aufgabe2
         int n;
         //ich verwende die Scanner Bibliothek, um Werte vom Tastatur zu lesen
      */   Scanner keyboard = new Scanner(System.in);
@@ -59,7 +59,7 @@ public class Main {
         int[] zahl = new int[] {2,3,7,0,0,0};
         System.out.println("Aufgabe3 3 = " + Arrays.toString(liste3.multiplikation(zahl, ziffer)));
         System.out.println("Aufgabe3 4 = " + Arrays.toString(liste3.division(zahl, ziffer)));
-*/
+
 
         ///////////////////////
         //Aufgabe4
@@ -75,7 +75,7 @@ public class Main {
         System.out.println("Aufgabe4 2 = " + liste4.teuesten(tastatur, USB));//80
         System.out.println("Aufgabe4 3 = " + liste4.buget_USB(buget, USB));//
         System.out.println("Aufgabe4 4 = " + liste4.buget_preisliste(buget, tastatur, USB));
-
+*/
     }
 
 }
