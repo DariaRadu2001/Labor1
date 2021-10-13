@@ -113,31 +113,31 @@ public class Aufgabe4 {
             throw new IllegalArgumentException("Sie haben kein Geld.");
 
         int preis = -1;
-        int summe = 0;
-        int i = -1;
-        int pret_tastatura = buget_USB(buget, tastatur);
-        int pret_USB = -1;
-        boolean gasit = false;
-        do {
-            i++;
-            summe = buget - pret_tastatura;
-            if(summe <= 0)
+        int summe, index_USB;
+        int index_tastatura = 0;
+        //ich suche fur jedem Preis der Tastaturen ein Preis von USB
+        while(index_tastatura < tastatur.length)
+        {
+            if(tastatur[index_tastatura] < buget)
             {
-                pret_tastatura = tastatur[i];
-            }
-            else
-            {
-                pret_USB = -1;
-                for(int j = 0; j < USB.length; j++)
+                index_USB = 0;
+                //wv. bleibt mir fur dem USB
+                summe = buget - tastatur[index_tastatura];
+                //ich durchqueere die Liste der Preise von USB's und finde das bestes Match
+                while(index_USB < USB.length)
                 {
-                    if(USB[j] <= summe && pret_USB < USB[j])
-                        pret_USB = USB[j];
 
+                        if(USB[index_USB] <= summe)
+                        {
+                            if((tastatur[index_tastatura] + USB[index_USB]) > preis)
+                                preis = tastatur[index_tastatura] + USB[index_USB];
+                        }
+
+                    index_USB++;
                 }
-                if(pret_USB != -1 && pret_USB+pret_tastatura <= buget)
-                    gasit = true;
             }
-        }while(!gasit && i < tastatur.length);
+            index_tastatura++;
+        }
 
         return preis;
     }

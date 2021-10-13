@@ -118,5 +118,55 @@ class Aufgabe4Test {
 
     @Test
     void buget_preisliste() {
+
+        try{
+            liste.buget_preisliste(30, new int[] {}, new int[] {});
+        }
+        catch(Exception e)
+        {
+            assert(true);
+        }
+
+        try{
+            liste.buget_preisliste(-4, new int[] {1,13,3,60}, new int[] {3});
+        }
+        catch(Exception e)
+        {
+            assert(true);
+        }
+
+        try{
+            liste.buget_preisliste(0, new int[] {1,133,66,113,33}, new int[] {});
+        }
+        catch(Exception e)
+        {
+            assert(true);
+        }
+
+        try{
+            liste.buget_preisliste(4, new int[] {1,13,-13}, new int[] {3,6,11});
+        }
+        catch(Exception e)
+        {
+            assert(true);
+        }
+
+        try{
+            assertEquals(55, liste.buget_preisliste(60, new int[] {32,37,40,20,111}, new int[] {12,15,49,3}));
+        }
+        catch(Exception e)
+        {
+            assert(false);
+        }
+
+        try{
+            assertEquals(-1, liste.buget_preisliste(31, new int[] {32,32,40,20,111,21,11,12,59}, new int[] {30,21,23,90,22}));
+        }
+        catch(Exception e)
+        {
+            assert(false);
+        }
+
+
     }
 }
