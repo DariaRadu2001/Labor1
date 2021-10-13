@@ -1,7 +1,5 @@
 package Aufgabe1;
 
-import javax.management.InvalidAttributeValueException;
-
 public class Aufgabe1 {
 
     /*1.

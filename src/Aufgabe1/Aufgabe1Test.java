@@ -205,4 +205,13 @@ class Aufgabe1Test {
             assert(false);
         }
     }
+
+    @Test
+    void all_tests() {
+        this.nicht_genug();
+        this.durchschnitt();
+        this.max_runden();
+        this.runden();
+    }
+
 }
