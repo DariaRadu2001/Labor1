@@ -9,6 +9,14 @@ public class Aufgabe3 {
     */
     public int[] summe(int[] zahl1, int[] zahl2)
     {
+        //Exception, wenn die Arrays leer sind
+        if(zahl1.length == 0 || zahl2.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Zahlen.");
+
+        //Exception, wenn Lange Zahl1 != Lange Zahl2
+        if(zahl1.length != zahl2.length)
+            throw new IndexOutOfBoundsException("Sie haben keine Zahlen mit derselben Lange.");
+
         //ich habe ein Array mit eine grossere lange mit 1 als die gegebenen Zahlen
         int[] summe = new int[zahl1.length + 1];
         summe[0] = 0;
@@ -52,8 +60,19 @@ public class Aufgabe3 {
     Nachbedinung: ein Array von Ziffern, die Differenz der zwei Zahlen
     Ich erledige von rechts nach links die Differenz jeden zwei Ziffern die sich auf der selben Position befinden
     */
-    public int[] differenz(int[] zahl1, int[] zahl2)
-    {
+    public int[] differenz(int[] zahl1, int[] zahl2) throws Exception {
+        //Exception, wenn die Arrays leer sind
+        if(zahl1.length == 0 || zahl2.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Zahlen.");
+
+        //Exception, wenn Lange Zahl1 != Lange Zahl2
+        if(zahl1.length != zahl2.length)
+            throw new IndexOutOfBoundsException("Sie haben keine Zahlen mit derselben Lange.");
+
+        //Exception, wenn Zahl1 < Zahl2
+        if(zahl1[0] < zahl2[0])
+            throw new Exception("Zahl1 kann nicht kleiner als Zahl2 sein");
+
         int[] differenz = new int[zahl1.length];
         differenz[0] = 0;
         int minus;
@@ -84,6 +103,15 @@ public class Aufgabe3 {
     */
     public int[] multiplikation(int[] zahl, int ziffer)
     {
+
+        //Exception, wenn das Array leer ist
+        if(zahl.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Zahl.");
+
+        //Exception, wenn wir keine gultige Ziffer bekommen
+        if(ziffer <= 0 || ziffer > 9)
+            throw new IllegalArgumentException("Die gegebene Ziffer ist nicht gultig");
+
         int[] mul = new int[zahl.length + 1];
 
         mul[0] = 0;
@@ -130,6 +158,15 @@ public class Aufgabe3 {
     */
     public int[] division(int[] zahl, int ziffer)
     {
+
+        //Exception, wenn das Array leer ist
+        if(zahl.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Zahl.");
+
+        //Exception, wenn wir keine gultige Ziffer bekommen
+        if(ziffer <= 0 || ziffer > 9)
+            throw new IllegalArgumentException("Die gegebene Ziffer ist nicht gultig");
+
         int[] div = new int[zahl.length];
         div[0] = 0;
         //in die Variable nr habe ich dem Zahl mitedem ich dividieren soll
