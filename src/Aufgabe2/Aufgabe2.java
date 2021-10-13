@@ -9,10 +9,18 @@ public class Aufgabe2 {
     */
     public int max(int[] zahlen)
     {
+        //Exception, wenn das Array leer ist
+        if(zahlen.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Zahlen.");
+
         //ich durchqueere die Liste und suche das maximale Wert
         int max = Integer.MIN_VALUE;
         for(int i = 0; i < zahlen.length; i++)
         {
+            //Exception, wenn eine Zahl negativ ist
+            if(zahlen[i] < 0)
+                throw new IllegalArgumentException("Negative Zahlen konnen nicht in dem Array sein.");
+
             if(zahlen[i] > max)
                 max = zahlen[i];
         }
@@ -26,10 +34,18 @@ public class Aufgabe2 {
     */
     public int min(int[] zahlen)
     {
+        //Exception, wenn das Array leer ist
+        if(zahlen.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Zahlen.");
+
         //ich durchqueere die Liste und suche das minimale Wert
         int min = Integer.MAX_VALUE;
         for(int i = 0; i < zahlen.length; i++)
         {
+            //Exception, wenn eine Zahl negativ ist
+            if(zahlen[i] < 0)
+                throw new IllegalArgumentException("Negative Zahlen konnen nicht in dem Array sein.");
+
             if(zahlen[i] < min)
                 min = zahlen[i];
         }
@@ -43,10 +59,17 @@ public class Aufgabe2 {
     */
     public int summe(int[] zahlen)
     {
+        //Exception, wenn das Array leer ist
+        if(zahlen.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Zahlen.");
+
         //ich berechne die Summer der Zahlen
         int summe = 0;
         for(int i = 0; i < zahlen.length; i++)
         {
+            //Exception, wenn eine Zahl negativ ist
+            if(zahlen[i] < 0)
+                throw new IllegalArgumentException("Negative Zahlen konnen nicht in dem Array sein.");
             summe += zahlen[i];
         }
         return summe;
@@ -59,6 +82,10 @@ public class Aufgabe2 {
     */
     public int max_summe(int[] zahlen)
     {
+        //Exception, wenn das Array leer ist
+        if(zahlen.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Zahlen.");
+
         //ich berechne die Summe mit der summe Methode und subtrahiere den minimalen Wert des Arrays
         int summe = summe(zahlen);
         int min = min(zahlen);
@@ -72,6 +99,11 @@ public class Aufgabe2 {
     */
     public int min_summe(int[] zahlen)
     {
+
+        //Exception, wenn das Array leer ist
+        if(zahlen.length == 0)
+            throw new IndexOutOfBoundsException("Sie haben keine Zahlen.");
+
         //ich berechne die Summe mit der summe Methode und subtrahiere den maximalen Wert des Arrays
         int summe = summe(zahlen);
         int max = max(zahlen);
