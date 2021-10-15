@@ -2,11 +2,14 @@ package Aufgabe3;
 
 public class Aufgabe3 {
 
-    /*1.
-    Vorbedinung: ein Array mit Ziffern von zahl1 und ein anderes Array von Ziffern von zahl2
-    Nachbedinung: ein Array von Ziffern, die Summe der zwei Zahlen
-    Ich erledige von rechts nach links die Summe jeden zwei Ziffern die sich auf der selben Position befinden
-    */
+    /**
+     *
+     * @param zahl1
+     * @param zahl2
+     * @return ein Array von Ziffern, die Summe der zwei Zahlen
+     * Ich erledige von rechts nach links die Summe jeden zwei Ziffern die sich auf der selben Position befinden
+     */
+
     public int[] summe(int[] zahl1, int[] zahl2)
     {
         //Exception, wenn die Arrays leer sind
@@ -55,11 +58,15 @@ public class Aufgabe3 {
         return summe;
     }
 
-    /*2.
-    Vorbedinung: ein Array mit Ziffern von zahl1 und ein anderes Array von Ziffern von zahl2
-    Nachbedinung: ein Array von Ziffern, die Differenz der zwei Zahlen
-    Ich erledige von rechts nach links die Differenz jeden zwei Ziffern die sich auf der selben Position befinden
-    */
+    /**
+     *
+     * @param zahl1
+     * @param zahl2
+     * @return ein Array von Ziffern, die Differenz der zwei Zahlen
+     * @throws Exception, wenn ein Array leer ist, wenn die Arrays von verschiedenen Langen sind
+     *                  ,wenn zahl1 < zahl2 ist
+     * Ich erledige von rechts nach links die Differenz jeden zwei Ziffern die sich auf der selben Position befinden
+     */
     public int[] differenz(int[] zahl1, int[] zahl2) throws Exception {
         //Exception, wenn die Arrays leer sind
         if(zahl1.length == 0 || zahl2.length == 0)
@@ -96,11 +103,14 @@ public class Aufgabe3 {
 
     }
 
-    /*3.
-    Vorbedinung: ein Array mit Ziffern von zahl und eine Ziffer
-    Nachbedinung: ein Array von Ziffern, die Multiplikation zwischen Zahl und Ziffer
-    Ich erledige von rechts nach links die Multiplikation jeder Ziffer mit dem Ziffer gegeben als Parameter
-    */
+
+    /**
+     *
+     * @param zahl
+     * @param ziffer
+     * @return ein Array von Ziffern, die Multiplikation zwischen Zahl und Ziffer
+     * Ich erledige von rechts nach links die Multiplikation jeder Ziffer mit dem Ziffer gegeben als Parameter
+     */
     public int[] multiplikation(int[] zahl, int ziffer)
     {
 
@@ -151,11 +161,14 @@ public class Aufgabe3 {
         return mul;
     }
 
-    /*4.
-    Vorbedinung: ein Array mit Ziffern von zahl und eine Ziffer
-    Nachbedinung: ein Array von Ziffern, die Division zwischen Zahl und Ziffer
-    Ich erledige von links nach rechts die Division jeder Ziffer mit dem Ziffer gegeben als Parameter
-    */
+
+    /**
+     *
+     * @param zahl
+     * @param ziffer
+     * @return ein Array von Ziffern, die Division zwischen Zahl und Ziffer
+     *  Ich erledige von links nach rechts die Division jeder Ziffer mit dem Ziffer gegeben als Parameter
+     */
     public int[] division(int[] zahl, int ziffer)
     {
 

@@ -2,11 +2,12 @@ package Aufgabe2;
 
 public class Aufgabe2 {
 
-    /*1.
-    Vorbedinung: ein Array von Zahlen
-    Nachbedinung: die maximale Zahl
-    Ich durchquerre den Array von Zahlen und suche den grossten Wert
-    */
+    /**
+     *
+     * @param zahlen
+     * @return die maximale Zahl
+     * Ich durchquerre den Array von Zahlen und suche den grossten Wert
+     */
     public int max(int[] zahlen)
     {
         //Exception, wenn das Array leer ist
@@ -27,11 +28,13 @@ public class Aufgabe2 {
         return max;
     }
 
-    /*2.
-    Vorbedinung: ein Array von Zahlen
-    Nachbedinung: die minimale Zahl
-    Ich durchquerre den Array von Zahlen und suche den kleinsten Wert
-    */
+
+    /**
+     *
+     * @param zahlen
+     * @return die minimale Zahl
+     * Ich durchquerre den Array von Zahlen und suche den kleinsten Wert
+     */
     public int min(int[] zahlen)
     {
         //Exception, wenn das Array leer ist
@@ -52,11 +55,13 @@ public class Aufgabe2 {
         return min;
     }
 
-    /*
-    Vorbedinung: ein Array von Zahlen
-    Nachbedinung: die Summe der Zahlen
-    Ich durchquerre den Array von Zahlen und berechne die Summe
-    */
+
+    /**
+     *
+     * @param zahlen
+     * @return die Summe der Zahlen
+     * Ich durchquerre den Array von Zahlen und berechne die Summe
+     */
     public int summe(int[] zahlen)
     {
         //Exception, wenn das Array leer ist
@@ -75,11 +80,12 @@ public class Aufgabe2 {
         return summe;
     }
 
-    /*3.
-    Vorbedinung: ein Array von Zahlen
-    Nachbedinung: die maximale Summe von n-1 Zahlen
-    Ich erledige die Summe mit der "summe" Methode un subtrahiere den minimalen Wert
-    */
+    /**
+     *
+     * @param zahlen
+     * @return die maximale Summe von n-1 Zahlen
+     * Ich erledige die Summe mit der "summe" Methode un subtrahiere den minimalen Wert
+     */
     public int max_summe(int[] zahlen)
     {
         //Exception, wenn das Array leer ist
@@ -92,11 +98,13 @@ public class Aufgabe2 {
         return summe - min;
     }
 
-    /*4.
-    Vorbedinung: ein Array von Zahlen
-    Nachbedinung: die minimale Summe von n-1 Zahlen
-    Ich erledige die Summe mit der "summe" Methode un subtrahiere den maximalen Wert
-    */
+
+    /**
+     *
+     * @param zahlen
+     * @return die minimale Summe von n-1 Zahlen
+     * Ich erledige die Summe mit der "summe" Methode un subtrahiere den maximalen Wert
+     */
     public int min_summe(int[] zahlen)
     {
 

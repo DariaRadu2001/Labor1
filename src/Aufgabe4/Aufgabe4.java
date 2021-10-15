@@ -3,11 +3,12 @@ import java.lang.Math;
 
 public class Aufgabe4 {
 
-    /*1.
-    Vorbedinung: ein Array mit Preise von Tastaturen
-    Nachbedinung: die billigste Tastatur
-    Ich durchquerre den Array von Preisen und suche den billigsten Wert
-   */
+    /**
+     *
+     * @param tastatur
+     * @return die billigste Tastatur
+     * Ich durchquerre den Array von Preisen und suche den billigsten Wert
+     */
     public int billige_tastatur(int[] tastatur)
     {
         //Exception, wenn das Array leer ist
@@ -27,11 +28,14 @@ public class Aufgabe4 {
         return min;
     }
 
-    /*2.
-    Vorbedinung: ein Array mit Preise von Tastaturen und ein Array mit Preise von USB's
-    Nachbedinung: der grosster Wert von den Arrays
-    Ich durchquerre beiden Arrays und suche die grossten Werten
-   */
+
+    /**
+     *
+     * @param tastatur
+     * @param USB
+     * @return der grosster Wert von den Arrays
+     * Ich durchquerre beiden Arrays und suche die grossten Werten
+     */
     public int teuesten(int[] tastatur , int[] USB)
     {
         //Exception, wenn die Arrays leer sind
@@ -67,11 +71,14 @@ public class Aufgabe4 {
         return Math.max(max_tastatur, max_USB);
     }
 
-    /*3.
-    Vorbedinung: ein Array mit Preise von USB's und ein Buget
-    Nachbedinung: der grosster Wert von dem Array der auch im Buget ist
-    Ich durchquerre den Array und suche den grossten Wert der <= als dem Buget ist
-   */
+
+    /**
+     *
+     * @param buget
+     * @param USB
+     * @return der grosster Wert von dem Array der auch im Buget ist
+     * Ich durchquerre den Array und suche den grossten Wert der <= als dem Buget ist
+     */
     public int buget_USB(int buget, int[] USB)
     {
         //Exception, wenn das Array leer ist
@@ -97,11 +104,15 @@ public class Aufgabe4 {
         return max_USB;
     }
 
-    /*4.
-   Vorbedinung: ein Array mit Preise von USB's, ein Array mit Preisen von Tastaturen und ein Buget
-   Nachbedinung: den Preis von eine Tastatur und USB's(soll sehr nahe der Buget sein) oder -1, wenn man beiden nicht kaufen kann
 
-   */
+    /**
+     *
+     * @param buget
+     * @param tastatur
+     * @param USB
+     * @return den Preis von eine Tastatur und USB's(soll sehr nahe der Buget sein) oder -1, wenn man beiden nicht kaufen kann
+     * Ich durchqueere die beiden Listen von Preisen und finde dem besten Match
+     */
     public int buget_preisliste(int buget, int[] tastatur, int[] USB)
     {
         //Exception, wenn die Arrays leer sind
