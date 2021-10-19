@@ -16,14 +16,13 @@ public class Aufgabe2 {
 
         //ich durchqueere die Liste und suche das maximale Wert
         int max = Integer.MIN_VALUE;
-        for(int i = 0; i < zahlen.length; i++)
-        {
+        for (int j : zahlen) {
             //Exception, wenn eine Zahl negativ ist
-            if(zahlen[i] < 0)
+            if (j < 0)
                 throw new IllegalArgumentException("Negative Zahlen konnen nicht in dem Array sein.");
 
-            if(zahlen[i] > max)
-                max = zahlen[i];
+            if (j > max)
+                max = j;
         }
         return max;
     }
@@ -43,14 +42,13 @@ public class Aufgabe2 {
 
         //ich durchqueere die Liste und suche das minimale Wert
         int min = Integer.MAX_VALUE;
-        for(int i = 0; i < zahlen.length; i++)
-        {
+        for (int j : zahlen) {
             //Exception, wenn eine Zahl negativ ist
-            if(zahlen[i] < 0)
+            if (j < 0)
                 throw new IllegalArgumentException("Negative Zahlen konnen nicht in dem Array sein.");
 
-            if(zahlen[i] < min)
-                min = zahlen[i];
+            if (j < min)
+                min = j;
         }
         return min;
     }
@@ -70,12 +68,11 @@ public class Aufgabe2 {
 
         //ich berechne die Summer der Zahlen
         int summe = 0;
-        for(int i = 0; i < zahlen.length; i++)
-        {
+        for (int j : zahlen) {
             //Exception, wenn eine Zahl negativ ist
-            if(zahlen[i] < 0)
+            if (j < 0)
                 throw new IllegalArgumentException("Negative Zahlen konnen nicht in dem Array sein.");
-            summe += zahlen[i];
+            summe += j;
         }
         return summe;
     }

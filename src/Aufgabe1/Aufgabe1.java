@@ -18,24 +18,21 @@ public class Aufgabe1 {
         int count2 = 0;
 
         //ich zahle wv. Noten nicht genug sind, um die Dimensions des Arrays zu wissen
-        for (int i = 0; i < noten.length; i++)
-        {
+        for (int j : noten) {
             //Exception, wenn eine Note negativ ist
-            if(noten[i] < 0)
+            if (j < 0)
                 throw new IllegalArgumentException("Negative Noten konnen nicht in dem Array sein.");
 
-            if (noten[i] < 38)
+            if (j < 38)
                 count++;
         }
 
         int[] ergebnis = new int[count];
 
         //ich erstelle den Array mit nicht zufriedenen Noten
-        for (int i = 0; i < noten.length; i++)
-        {
-            if (noten[i] < 38)
-            {
-                ergebnis[count2] = noten[i];
+        for (int j : noten) {
+            if (j < 38) {
+                ergebnis[count2] = j;
                 count2++;
             }
         }
@@ -54,16 +51,14 @@ public class Aufgabe1 {
         if(noten.length == 0)
             throw new IndexOutOfBoundsException("Sie haben keine Noten.");
 
-        double durchschnitt = 0;
         double summe = 0;
         //ich berechne die Summe des Arrays und mache die Aritmetische Mittel
-        for (int i = 0; i < noten.length; i++)
-        {
+        for (int j : noten) {
             //Exception, wenn eine Note negativ ist
-            if(noten[i] < 0)
+            if (j < 0)
                 throw new IllegalArgumentException("Negative Noten konnen nicht in dem Array sein.");
 
-            summe += noten[i];
+            summe += j;
         }
         return summe/noten.length;
     }
@@ -128,21 +123,18 @@ public class Aufgabe1 {
             throw new IndexOutOfBoundsException("Sie haben keine Noten.");
 
         int max = Integer.MIN_VALUE;
-        for (int i = 0; i < noten.length; i++)
-        {
+        for (int j : noten) {
             //Exception, wenn eine Note negativ ist
-            if(noten[i] < 0)
+            if (j < 0)
                 throw new IllegalArgumentException("Negative Noten konnen nicht in dem Array sein.");
 
             //ich runde die Liste und wo ich runde, prufe ich ob das gerundete Zahl das grosste ist
-            if(noten[i] >= 38)
-            {
-                if(noten[i]%5 != 0)
-                {
-                    int diff = (noten[i]/5+1)*5 - noten[i];
-                    if(diff < 3)
-                        if((noten[i]/5+1)*5 > max)
-                            max = (noten[i]/5+1)*5;
+            if (j >= 38) {
+                if (j % 5 != 0) {
+                    int diff = (j / 5 + 1) * 5 - j;
+                    if (diff < 3)
+                        if ((j / 5 + 1) * 5 > max)
+                            max = (j / 5 + 1) * 5;
                 }
 
             }

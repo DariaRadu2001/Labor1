@@ -49,10 +49,7 @@ public class Aufgabe3 {
         if(summe[0] == 0)
         {
             int[] summe2 = new int[zahl1.length];
-            for(int i = zahl1.length - 1; i >= 0; i--)
-            {
-                summe2[i] = summe[i+1];
-            }
+            System.arraycopy(summe, 1, summe2, 0, zahl1.length - 1 + 1);
             return summe2;
         }
         return summe;
@@ -152,10 +149,7 @@ public class Aufgabe3 {
         if(mul[0] == 0)
         {
             int[] mul2 = new int[zahl.length];
-            for(int i = zahl.length - 1; i >= 0; i--)
-            {
-                mul2[i] = mul[i+1];
-            }
+            System.arraycopy(mul, 1, mul2, 0, zahl.length - 1 + 1);
             return mul2;
         }
         return mul;
@@ -197,10 +191,7 @@ public class Aufgabe3 {
         if(div[0] == 0)
         {
             int[] div2 = new int[div.length - 1];
-            for(int i = div2.length - 1; i >= 0; i--)
-            {
-                div2[i] = div[i+1];
-            }
+            System.arraycopy(div, 1, div2, 0, div2.length - 1 + 1);
             return div2;
         }
 
